@@ -16,7 +16,7 @@ describe('db',()=>{
     })
     it('can write',async ()=>{
         let file
-        fs.setWriteMocks('/yyy',(path,data,callback)=>{
+        fs.setWriteMocks('/yyy',(path,data,options,callback)=>{
             file = data
             callback(null)
         })
